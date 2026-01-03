@@ -1,5 +1,7 @@
 package com.satellite.progiple.filles.handlers;
 
+import com.satellite.progiple.utils.DiMath;
+
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
@@ -14,6 +16,30 @@ public class EnvStorage {
 
     public String get(String key) {
         return map.get(key);
+    }
+
+    public int getInt(String key) {
+        return DiMath.toInt(get(key));
+    }
+
+    public double getDouble(String key) {
+        return DiMath.toDouble(get(key));
+    }
+
+    public long getLong(String key) {
+        return DiMath.toLong(get(key));
+    }
+
+    public float getFloat(String key) {
+        return DiMath.toFloat(get(key));
+    }
+
+    public byte getByte(String key) {
+        return DiMath.toByte(get(key));
+    }
+
+    public boolean getBoolean(String key) {
+        return DiMath.toBoolean(get(key));
     }
 
     public Collection<String> getKeys(String prefix) {
